@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 14
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId 'net.xenotropic.opengerman'
+        minSdkVersion 14
+        targetSdkVersion 14
+    }
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile files('libs/opencsv.jar')
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+}
